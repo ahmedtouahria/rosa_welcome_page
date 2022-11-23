@@ -12,7 +12,6 @@
 		$("#loader").delay(100).fadeOut();
 		$("#loader-wrapper").delay(100).fadeOut("fast");
 				
-		$(window).stellar({});
 		
 	});
 	
@@ -163,257 +162,38 @@
 		
 		$.scrollUp();
 
-
-		/*----------------------------------------------------*/
-		/*	Video Link Lightbox
-		/*----------------------------------------------------*/
-		
-		$('.video-popup').magnificPopup({
-		    type: 'iframe',
-		  	  
-				iframe: {
-					patterns: {
-						youtube: {
-			   
-							index: 'youtube.com',
-							src: 'https://www.youtube.com/embed/kuceVNBTJio'
-				
-								}
-							}
-						}		  		  
-		});
-
-
 		/*----------------------------------------------------*/
 		/*	Statistic Counter
 		/*----------------------------------------------------*/
-	
-		$('.statistic-number').each(function () {
-			$(this).appear(function() {
-				$(this).prop('Counter',0).animate({
-					Counter: $(this).text()
-				}, {
-					duration: 4000,
-					easing: 'swing',
-					step: function (now) {
-						$(this).text(Math.ceil(now));
-					}
-				});
-			},{accX: 0, accY: 0});
-		});
-
 
 		/*----------------------------------------------------*/
 		/*	Testimonials Rotator Slick Carousel
 		/*----------------------------------------------------*/
 		
-		$('#reviews-1 .center, #reviews-2 .center').slick({
-			centerMode: true,
-			autoplay: true,
-			centerPadding: '0px',
-			speed: 800,
-			slidesToShow: 3,
-			dots: true,
-			responsive: [
-				{
-					breakpoint: 1199,
-					settings: {
-					arrows: false,
-					centerMode: true,
-					centerPadding: '0px',
-					slidesToShow: 3
-					}
-				},
-				{
-					breakpoint: 991,
-					settings: {
-					arrows: false,
-					centerMode: true,
-					centerPadding: '0px',
-					slidesToShow: 3
-					}
-				},
-				{
-					breakpoint: 800,
-					settings: {
-					arrows: false,
-					centerMode: true,
-					centerPadding: '0px',
-					slidesToShow: 1
-					}
-				},
-				{
-					breakpoint: 767,
-					settings: {
-					arrows: false,
-					centerMode: true,
-					centerPadding: '0px',
-					slidesToShow: 1
-					}
-				},
-				{
-					breakpoint: 648,
-					settings: {
-					arrows: false,
-					centerMode: true,
-					centerPadding: '0px',
-					slidesToShow: 1
-					}
-				}
-			]
-		});
 
 
 		/*----------------------------------------------------*/
 		/*	Screens Carousel Slick
 		/*----------------------------------------------------*/
-		
-		$('.screens-carousel').slick({
-			infinite: true,
-			autoplay: true,
-			centerMode: true,
-			dots: true,
-			autoplaySpeed: 3500,
-			speed: 1000,
-			slidesToShow: 5,
-			slidesToScroll: 1,
-			variableWidth: true,
-			responsive: [
-			    {
-			      breakpoint: 769,
-			      settings: {
-			        slidesToShow: 3
-			      }
-			    },
-			    {
-			      breakpoint: 480,
-			      settings: {
-				    dots: false,
-			        slidesToShow: 1,
-			        variableWidth: false,
-			        fade: true,
-					cssEase: 'linear'
-			      }
-			    }
-			]
-		});	
-
-
 
 		/*----------------------------------------------------*/
 		/*	Contact Form Validation
 		/*----------------------------------------------------*/
-		
-		$(".contact-form").validate({
-			rules:{ 
-					name:{
-						required: true,
-						minlength: 1,
-						maxlength: 16,
-					},
-					email:{
-						required: true,
-						email: true,
-					},       		
-					message:{
-						required: true,
-						minlength: 2,
-						}
-					},
-					messages:{
-							name:{
-								required: "Please enter no more than (1) characters"
-							}, 
-							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
-							}, 
-							message:{
-								required: "Please enter no more than (2) characters"
-							}, 
-						}
-		});	
 
 
 		/*----------------------------------------------------*/
 		/*	Comment Form Validation
 		/*----------------------------------------------------*/
 		
-		$(".comment-form").validate({
-			rules:{ 
-					name:{
-						required: true,
-						minlength: 1,
-						maxlength: 16,
-					},
-					email:{
-						required: true,
-						email: true,
-					},       		
-					message:{
-						required: true,
-						minlength: 2,
-						}
-					},
-					messages:{
-							name:{
-								required: "Please enter no more than (1) characters"
-							}, 
-							email:{
-								required: "We need your email address to contact you",
-								email: "Your email address must be in the format of name@domain.com"
-							}, 
-							message:{
-								required: "Please enter no more than (2) characters"
-							}, 
-						}
-		});
 
 
 		/*----------------------------------------------------*/
 		/*	Bottom Quick Form
 		/*----------------------------------------------------*/
 
-		$('.bottom-form-header').parent().delay(1000).animate({bottom: '-311px'}, 1000, function(){
-			$(this).find('.bottom-form-header').addClass('closed');
-		}); 
-		
-		
-		$('.bottom-form-header').click(function(){
-			if ($(this).hasClass('closed')){
-				$(this).next('.bottom-form-holder').css({display:'block'}).parent().animate({bottom: 0}, 1000, function(){
-					$(this).find('.bottom-form-header').removeClass('closed');
-				});
-			} else {
-				$(this).parent().animate({bottom: '-311px'}, 1000, function(){
-					$(this).find('.bottom-form-header').addClass('closed');
-				});
-			}
-			
-			return false;
-		});
-
-
 		/*----------------------------------------------------*/
 		/*	Newsletter Subscribe Form
 		/*----------------------------------------------------*/
-	
-		$('.newsletter-form').ajaxChimp({
-        language: 'cm',
-        url: 'https://dsathemes.us3.list-manage.com/subscribe/post?u=af1a6c0b23340d7b339c085b4&id=344a494a6e'
-            //http://xxx.xxx.list-manage.com/subscribe/post?u=xxx&id=xxx
-		});
-
-
-		$.ajaxChimp.translations.cm = {
-			'submit': 'Submitting...',
-			0: 'We have sent you a confirmation email',
-			1: 'Please enter your email address',
-			2: 'An email address must contain a single @',
-			3: 'The domain portion of the email address is invalid (the portion after the @: )',
-			4: 'The username portion of the email address is invalid (the portion before the @: )',
-			5: 'This email address looks fake or invalid. Please enter a real email address'
-		};	
 
 
 

@@ -769,7 +769,9 @@
 /* ------------------------------------------------------------------------ */
 
 @media (max-width: 768px) { 
-
+.follow_me{
+  color: black !important;
+}
 	.animated { visibility: visible; display: block; }
 
 	@keyframes fadeIn {

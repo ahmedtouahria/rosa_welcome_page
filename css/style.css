@@ -1597,7 +1597,7 @@ a.store:last-child {
 
 .hero-stores-badge p {
   font-weight: 500;
-  margin-bottom: : 10px;
+  margin-bottom: 10px;
 }
 
 .hero-stores-badge span {
@@ -1606,6 +1606,7 @@ a.store:last-child {
   font-style: italic;
   line-height: 1; 
   margin-top: 20px; 
+  font-weight: 700;
 }
 
 /*------------------------------------------*/
