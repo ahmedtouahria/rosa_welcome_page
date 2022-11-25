@@ -1396,7 +1396,7 @@
     #hero-1, #hero-5 { padding-top: 80px; padding-bottom: 60px; }
     #hero-2 { padding-top: 80px; padding-bottom: 60px; background-position: left bottom; }
     #hero-4 { padding-top: 80px; }
-    #hero-7 { padding-top: 80px; padding-bottom: 60px; background-position: bottom left; }
+    #hero-7 {  padding-bottom: 60px; background-position: bottom left; }
     #hero-10 { padding-top: 80px; padding-bottom: 60px; background-position: right center; }
     #hero-12 { background-position: right center; }
 
