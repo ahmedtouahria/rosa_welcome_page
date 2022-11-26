@@ -1352,8 +1352,8 @@
     /* Store Badges */
     a.store { margin-right: 8px; }
 
-    .store img.appstore-original { width: 128px; height: 40px; }
-    .store img.googleplay-original { width: 137px; height: 40px; }
+    .store img.appstore-original { width: 109px; height: 40px; }
+    .store img.googleplay-original { width: 109px; height: 40px; }
     .store img.amazon-original { width: 126px; height: 44px; }
     .store img.windows-original { width: 131px; height: 40px; }
 
